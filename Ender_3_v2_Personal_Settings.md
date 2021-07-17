@@ -24,8 +24,6 @@ default_envs = STM32F103RET6_creality
 #define DEFAULT_bedKd 194.37
 
 
-
-
 **For BLTouch change:**
 
 #define Z_MIN_PROBE_USES_Z_MIN_ENDSTOP_PIN
@@ -53,6 +51,10 @@ default_envs = STM32F103RET6_creality
 #define Z_MIN_PROBE_REPEATABILITY_TEST
 
 
+
+
+
+
 **In Configuration_adv.h change:**
 
 #define BABYSTEP_ZPROBE_OFFSET
@@ -66,6 +68,7 @@ default_envs = STM32F103RET6_creality
 
 #define ADVANCED_PAUSE_FEATURE
 #define FILAMENT_LOAD_UNLOAD_GCODES  
+
 
 
 
@@ -112,9 +115,10 @@ M84 X Y E ;Disable all steppers but Z
 
 
 
+
 **OctoPrint Settings**
 
-**BLTouch Probing G Code**
+**BLTouch Mesh Probing G Code**
 G28       ; home all axes
 M155 S30  ; reduce temperature reporting rate to reduce output pollution
 M190 S60  ; (optional) wait for the bed to get up to temperature
